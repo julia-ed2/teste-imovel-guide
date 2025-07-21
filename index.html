@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Imovel Guide</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js" integrity="sha512-BNaRQnYJYiPSqHHDb58B0yaPfCu+Wgds8Gp/gU33kqBtgNS4tSPHuGibyoeqMV/TJlSKda6FXzoEyYGjTe+vXA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.js" integrity="sha512-sn/GHTj+FCxK5wam7k9w4gPPm6zss4Zwl/X9wgrvGMFbnedR8lTUSLdsolDRBRzsX6N+YgG6OWyvn9qaFVXH9w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><img src="img/logo-imovel-guide (1).webp" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Condomínios</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Fórum</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Guia</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Artigos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Ferramentas</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Cotar Imóvel</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Planos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Entrar</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item borda">
+                            <a class="nav-link" href="#">Cadastre-se</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mt-5">
+        <div class="grid container text-center">
+            <div class="row">
+                <div class="col-12 col-md-6 col-lg-4 border mb-4">
+                    <div class="container-imovel">
+                        <div class="row justify-content-between">
+                            <div class="col-5">
+                                <div class="container-imagem">
+                                    <img src="img/colaboradora.png" class="img-fluid imagem-desfoque">
+                                    <img src="img/colaboradora.png" class="img-fluid imagem-sobreposta" alt="">
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <div class="texto text-start">
+                                    <h5>Nome Corretora</h5>
+                                    <p>3.000 pontos</p>
+                                    <button id="btnVerTelefone" class="btn-telefone text-start">Ver telefone</button>
+                                    <p id="numeroTelefone" class="telefone-oculto">(34)9999-9999</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container-imovel">
+                        <div class="row justify-content-between">
+                            <div class="col-5">
+                                <div class="container-imagem">
+                                    <img src="img/colaborador2.png" class="img-fluid imagem-desfoque">
+                                    <img src="img/colaborador2.png" class="img-fluid imagem-sobreposta">
+                                </div>
+                            </div>
+                            <div class="col-5">
+                                <div class="texto text-start">
+                                    <h5>Nome Corretor</h5>
+                                    <p>1.260 pontos</p>
+                                    <button id="btnVerTelefone2" class="btn-telefone text-start">Ver telefone</button>
+                                    <p id="numeroTelefone2" class="telefone-oculto">(34)9999-9999</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container col-12 col-md-6 col-lg-4 border mb-4">
+                    <div class="formulario text-start mt-4 mb-4">
+                        <h4 class="mb-4">Mande uma mensagem:</h4>
+                        <form id="formularioContato">
+                            <div class="input-group mb-4">
+                                <label for="inputCpf"></label>
+                                <input type="text" id="inputCpf" class="form-control" placeholder="Digite seu CPF">
+                            </div>
+                            <div class="input-group mb-4">
+                                <label for="inputTelefone"></label>
+                                <input type="text" id="inputTelefone" class="form-control"
+                                    placeholder="Digite seu telefone">
+                            </div>
+                            <div class="input-group mb-4">
+                                <label for="inputMensagem"></label>
+                                <textarea id="inputMensagem" class="form-control"
+                                    placeholder="Digite o assunto"></textarea>
+                            </div>
+                            <div>
+                                <button type="submit" id="btnEnviarMensagem" class="btn btnEnviar">Enviar
+                                    Mensagem</button>
+                            </div>
+                        </form>
+                    </div>
+
+                </div>
+                <div class="container col-12 col-md-6 col-lg-4 border mb-4">
+                    <div class="regra-de-3 text-start mt-4 mb-4">
+                        <h4 class="mb-5">Regra de 3</h4>
+                        <div class="container text-center">
+                            <div class="row justify-content-between mb-2">
+                                <div class="col-6">
+                                    <input type="number" class="w-75" id="inputA" placeholder="A">
+                                </div>
+                                <div class="col-6">
+                                    <input type="number" class="w-75" id="inputB" placeholder="B">
+                                </div>
+                            </div>
+                            <div class="row mb-5">
+                                <div class="col-6">
+                                    <input type="number" class="w-75" id="inputC" placeholder="C">
+                                </div>
+                                <div class="col-6 d-flex justify-content-center align-items-center">
+                                    <div class="retangulo-resultado w-75">
+                                        <span id="resultadoRegra3">?</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <button id="btnCalcularRegra3" class="btn btnEnviar mt-5">Calcular</button>
+                    </div>
+                </div>
+
+                <div class="container col-md-6 col-lg-4 border mb-4">
+                    <div class="container-imagem-modal">
+                        <img src="img/casa.png" class="img-fluid" alt="">
+
+                        <button type="button" id="btnAbrirModal" class="btn btnEnviar mt-4 mb-4">
+                            Abrir imagem no modal
+                        </button>
+                    </div>
+                    <!-- Modal -->
+                    <div>
+                        <div class="modal" id="imageModal">
+                            <div class="container container-imagem-modal2">
+                                <span class="close-button" id="closeModalBtn">&times;</span>
+                                <img src="img/casa.png" alt="" class="modal-content" id="modalImage">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!--imagem download-->
+                </div>
+                <div class="container col-12 col-md-6 col-lg-4 border mb-4">
+                   <div class="imagemCard" id="printArea">
+                        <img src="img/casa.png" class="img-fluid" alt="">
+                        <div class="textoCard">
+                            <p>Imovel Guide</p>
+                        </div>
+                   </div>
+                   <button class="btn btnEnviar mt-4 mb-4" id="downloadBtn">Download</button>
+                </div>
+                <!--imagem zoom-->
+                <div class="container col-12 col-md-6 col-lg-4 border mb-4">
+                    <div class="image-container">
+                        <img src="img/casa.png" alt="" class="img-fluid">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+    <footer>
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Termos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contatos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Sobre</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link"></a>
+                        </li>
+                    </ul>
+                </div>
+                <p style="color: #ffff;" class="">&copy; Copyright 2022. Todos os direitos reservados.</p>
+                <img src="img/logo-imovel-guide (1).webp" class="navbar-brand img-fluid" alt="">
+            </div>
+        </nav>
+
+        </div>
+    </footer>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
