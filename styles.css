@@ -1,0 +1,224 @@
+* {
+    font-family: roboto, sans-serif;
+}
+
+
+
+.navbar {
+    background-color: #1b2653 !important;
+}
+
+.navbar a {
+    color: #ffffff !important;
+}
+
+.borda {
+    border: 1px solid #ffffff !important;
+    border-radius: 1.25rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+    margin-left: 1rem !important;
+}
+
+.navbar-toggler-icon {
+    color: #ffffff !important;
+}
+
+.container-imovel{
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    padding: 0.7rem;
+
+}
+
+.container-imagem {
+    position: relative;
+    width: 9rem;
+    height: 9rem;
+    flex-shrink: 0;
+    display: flex;
+    box-shadow: rgba(0, 0, 0, 8) 0px 1px 1px;
+}
+
+.imagem-desfoque {
+    width: 100%;
+    height: 100%;
+    filter: blur(8px);
+    position: absolute;
+    flex-shrink: 0;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.imagem-sobreposta {
+    width: 70%;
+    height: 100%;
+    position: absolute;
+    flex-shrink: 0;
+    /* centralização*/
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+}
+
+/*telefone*/
+.btn-telefone{
+    color: #fe6613;
+    background-color: transparent;
+    border: none;
+    text-decoration: #fe6613;
+    cursor: pointer;
+
+}
+
+.telefone-oculto{
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    color: #1b2653;
+    font-weight: bold;
+    margin-top: 0.93rem;
+    transition: opacity 0.3s ease, height 0.3s ease;
+}
+
+.telefone-visivel{
+    opacity: 1;
+    height: auto;
+    overflow: visible;
+}
+
+/*formulario*/
+#formularioContato{
+    text-align: left;
+}
+
+.btnEnviar{
+    background-color: #fe6613;
+    color: #ffffff;
+    border: #fe6613;
+    padding: 0.5rem 1rem;
+    border-radius: 0.25rem;
+    cursor: pointer;
+}
+.btnEnviar:hover {
+    background-color: #ffffff;
+    color: #fe6613;
+    border: 1px solid #fe6613;
+}
+
+/*regra de 3*/
+.retangulo-resultado{
+    border: 1px solid #fe6613;
+    width: 8rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+
+}
+
+/* modal*/
+.modal{
+    display: none;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid #000000;
+}
+
+.container-imagem-modal2{
+    margin: auto;
+    display: flex;
+    max-width: 80%;
+    height: 80%;
+    background-color: #ffffff;
+}
+
+.modal-content {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    max-width: 80%;
+    max-height: 80%;
+}
+
+.close-button {
+    position: absolute;
+    top: 0.02rem;
+    right: 1rem;
+    color: #fe6613;
+    font-size: 2.5rem;
+    cursor: pointer;
+}
+
+/*imagem download*/
+.imagemCard{
+    position: relative;
+    overflow: hidden;
+}
+
+.textoCard {
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+    right: 0;
+    background-color: #fe6613;
+    color: #ffffff;
+    border: #fe6613;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+}
+
+/*imagem zoom*/
+.image-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.image-container::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    right: -10px;
+    bottom: -10px;
+    background-image: url('img/casa.png');
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    animation: zoomOutSubtle 8s infinite alternate;
+}
+
+.animated-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+    transform: scale(2.5);
+    animation: zoomIn 8s infinite alternate;
+    z-index: 2;
+}
+
+
+@keyframes zoomOutSubtle {
+    0% {
+        transform: scale(2.5);
+    }
+    50% {
+        transform: scale(2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
